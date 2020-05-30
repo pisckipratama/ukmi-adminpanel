@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+    integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+  <title>Kader UKMI</title>
+
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+
+    }
+
+    .form-control {
+      border: 0;
+    }
+
+    .fa-heart-o {
+      color: maroon;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: white;">
+    <a class="navbar-brand" href="#">
+      <img src="/images/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+      UKMI
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <!-- <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Profile</a>
+        </li> -->
+      </ul>
+      <a class="btn btn-outline-secondary btn-sm" href="/logout" role="button">Sign Out</a>
+    </div>
+  </nav>
+  <div class="container">
+
+    <br />
+    <h3 class="text-center">Assalamualaikum, <%= data[0].namalengkap %>, Berikut data kamu :)</h3>
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-10 col-lg-8">
+        <!-- <form class="card card-sm" method="GET">
+          <div class="card-body row no-gutters align-items-center">
+            <div class="col-auto">
+              <i class="fas fa-search h4 text-body mr-2"></i>
+            </div>
+
+            <div class="col">
+              <input class="form-control form-control-lg" type="search" name="nim" placeholder="Your NIM">
+            </div>
+
+            <div class="col-auto">
+              <button class="btn btn-lg btn-success" type="submit">Search</button>
+            </div>
+
+          </div>
+        </form> -->
+        <br>
+        <table class="table table-striped ml-2">
+          <tbody>
+            <tr>
+              <th scope="col" style="width: 30%">NIM</th>
+              <th scope="col" style="width: 70%"><%= data[0].nim %></th>
+            </tr>
+            <tr>
+              <th scope="row" style="width: 30%">Nama Lengkap</th>
+              <td style="width: 70%"><%= data[0].namalengkap %></td>
+            </tr>
+            <tr>
+              <th scope="row" style="width: 30%">Jurusan</th>
+              <td style="width: 70%"><%= data[0].jurusan %></td>
+            </tr>
+            <tr>
+              <th scope="row" style="width: 30%">Tempat Tanggal Lahir</th>
+              <td style="width: 70%"><%= data[0].tempatlahir %>, <%= moment(data[0].tanggallahir).format('LL') %></td>
+            </tr>
+            <tr>
+              <th scope="row" style="width: 30%">Alamat Sekarang</th>
+              <td style="width: 70%"><%= data[0].alamat %></td>
+            </tr>
+            <tr>
+              <th scope="row" style="width: 30%">No Handphone</th>
+              <td style="width: 70%"><%= data[0].nohp %></td>
+            </tr>
+            <tr>
+              <th scope="row" style="width: 30%">Email</th>
+              <td style="width: 70%"><%= data[0].email %></td>
+            </tr>
+            <tr>
+              <th scope="row" style="width: 30%">Divisi</th>
+              <td style="width: 70%"><%= data[0].divisi ? data[0].divisi : "-" %></td>
+            </tr>
+            <tr>
+              <th scope="row" style="width: 30%">Hobi</th>
+              <td style="width: 70%"><%= data[0].hobby ? data[0].hobby : "-" %></td>
+            </tr>
+            <tr>
+              <th scope="row" style="width: 30%">Pengalaman Organisasi</th>
+              <td style="width: 70%"><%= data[0].pengalamanorganisasi ? data[0].pengalamanorganisasi : "-" %></td>
+            </tr>
+            <tr>
+              <th scope="row" style="width: 30%">Pengkaderan <br> <span class="text-muted">yang sudah diikuti</span>
+              </th>
+              <td style="width: 70%"><%= data[0].pengkaderan ? data[0].pengkaderan : "-" %></td>
+            </tr>
+            <tr>
+              <th scope="row" style="width: 30%">Sertifikat <br> <span class="text-muted">selama kepengurusan</span>
+              </th>
+              <td style="width: 70%"><%= data[0].sertifikat ? data[0].sertifikat : "-" %></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!--end of col-->
+    </div>
+  </div>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+    integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+  <link rel="icon" href="/images/logo.png" type="image/png">
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+
+    }
+
+    .fa-heart-o {
+      color: maroon;
+    }
+  </style>
+
+  <title>Kader UKMI</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: white;">
+    <a class="navbar-brand" href="/result">
+      <img src="/images/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+      UKMI
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/result/cp">Change Password</a>
+        </li>
+      </ul>
+      <a class="btn btn-outline-secondary btn-sm" href="/signout" role="button">Sign Out</a>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="card mt-3">
+      <div class="card-header">
+        <h3>Change Password</h3>
+      </div>
+      <div class="card-body">
+        <div id="myDIV">
+          <!-- <h5>Assalamualaikum, <span class="text-muted"><%= data[0].namalengkap %></span> :) </h5> -->
+          <form>
+            <div class="form-group">
+              <label for="oldpass">Old Password</label>
+              <input type="password" class="form-control" id="oldpass" name="oldpass" required>
+            </div>
+            <div class="form-group">
+              <label for="newpass1">New Password</label>
+              <input type="password" class="form-control" id="newpass1" name="newpass1" required>
+            </div>
+            <div class="form-group">
+              <label for="newpass2">Retype New Password</label>
+              <input type="password" class="form-control" id="newpass2" name="newpass2" required>
+            </div>
+            <div class="form-group row">
+              <div class="col-sm-10">
+                <button type="submit" class="btn btn-primary">Change</button>
+                <a href="/result" class="btn btn-danger">Back</a>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="card-footer text-muted text-center">
+        Dibuat dengan <i class="fa fa-heart fa-heart-o"></i> oleh Hamba Allah
+      </div>
+    </div>
+    <br><br>
+  </div>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
